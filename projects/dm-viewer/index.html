@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VePlexity’s Insta DM Viewer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 🌟 Welcome Screen -->
+ <div id="welcomeScreen" class="welcome-screen">
+  <div class="welcome-box">
+    <img src="assets/VP-logo.png" alt="Logo" class="welcome-logo" />
+    <h1 class="welcome-title">VePlexity’s Insta DM Viewer</h1>
+    <p class="welcome-tagline">Built for memories. Designed for clarity.</p>
+    <button id="startToolBtn" class="start-btn">🚀 Start Tool</button>
+  </div>
+</div>
+
+
+
+  <!-- 🎬 Splash Screen -->
+  <div id="splash" class="splash-screen hidden">
+    <h1 class="splash-title">VePlexity’s Insta DM Viewer</h1>
+    <p class="splash-subtitle">Loading developer build... 🛠️</p>
+  </div>
+
+  <!-- 🔄 Loader -->
+  <div id="loader" class="loader-overlay hidden">
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading messages...</p>
+  </div>
+
+  <!-- 🧩 Main App -->
+  <div class="app hidden">
+    <aside id="highlightSidebar">
+      <h2 id="highlights-title">⭐ Chat Highlights</h2>
+      <ul id="highlightList"></ul>
+
+      <h2 id="stats-title" class="toggle-header" onclick="togglePanel('statsContent', this)">
+        <span>📊 Chat Stats</span> <span class="arrow">▼</span>
+      </h2>
+      <div id="statsContent" class="collapsible open">
+        <div id="chatStats" class="chat-stats"></div>
+      </div>
+
+      <h2 id="cloud-title" class="toggle-header" onclick="togglePanel('cloudContent', this)">
+        <span>☁️ Word Cloud</span> <span class="arrow">▼</span>
+      </h2>
+      <div id="cloudContent" class="collapsible open">
+        <canvas id="wordCloudCanvas" width="240" height="200"></canvas>
+      </div>
+
+      <h2 class="toggle-header" onclick="togglePanel('aboutMeContent', this)">
+        <span>🧠 About the Creator</span> <span class="arrow">▼</span>
+      </h2>
+      <div id="aboutMeContent" class="collapsible open">
+        <div class="about-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="Dev Avatar" class="dev-avatar">
+          <p><strong>👨‍💻 Veer Madan</strong> (aka VePlexity)</p>
+          <p>🛠 Creator & Developer of this tool</p>
+          <p>📌 Built for personal use, memory, and clarity</p>
+          <p>💬 “Every chat tells a story. I just wanted to read it better.”</p>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <h1 class="fancy-title">VePlexity’s Insta DM Viewer <span class="dev-tag">[dev]</span></h1>
+        <div class="controls">
+          <label class="file-label">
+            📂 Choose JSON
+            <input type="file" id="fileInput" accept=".json" />
+          </label>
+          <span id="fileNameDisplay">No file chosen</span>
+          <select id="identitySelector" class="hidden"></select>
+          <input type="text" id="search" placeholder="Search messages..." />
+        </div>
+      </header>
+
+      <section id="chatContainer" class="chat-container-wrapper">
+        <div id="chatInner" class="chat-inner"></div>
+      </section>
+
+      <footer class="footer">
+        Made with ❤️ by <strong>Veer Madan</strong> (with help from ChatGPT 🤖)
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
