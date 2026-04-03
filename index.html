@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 
 
-<link rel="icon" href="assets/favicon.png">
+<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
 
 <!--structured data-->
@@ -65,6 +65,7 @@
 
   <!-- HERO -->
   <section class="hero">
+    
     <h2>Hi, I'm</h2>
 <h1>Veer Madan</h1>
 <p id="typing"></p>
@@ -75,27 +76,73 @@
   </section>
 
  <!-- ABOUT -->
- <section id="about" class="section reveal">
-  <h2>About Me</h2>
-  <p>
-    I'm a developer and creative technologist focused on building interactive systems,
-    tools, and digital experiences. My work spans web development, game modding,
-    system-level experimentation, and content creation.
-  </p>
+<section id="about" class="section reveal about-insane">
 
-  <p>
-    I enjoy understanding how things work under the hood from debugging game engines
-    and building custom tools, to designing user interfaces and optimizing performance.
-    My approach combines technical problem-solving with creative thinking.
-  </p>
+  <div class="about-wrapper">
 
-  <p>
-    Alongside development, I actively create content, produce music, and explore
-    new technologies to expand my skillset and push boundaries.
-  </p>
-  <p class="sub-note">
-  Building systems, creating experiences, and constantly evolving.
+    <!-- LEFT VISUAL -->
+    <div class="about-visual">
+
+      <div class="pfp-card">
+        <img src="assets/images/pfp.jpg" alt="Veer Madan">
+      </div>
+
+      <!-- floating elements -->
+       <div class="floating-container">
+      <div class="floating-tag tag1">DEVELOPMENT</div>
+      <div class="floating-tag tag2">AI</div>
+      <div class="floating-tag tag3">MUSIC PRODUCTION</div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT TEXT -->
+    <div class="about-content">
+
+      <h2>About Me</h2>
+
+      <h1 class="about-name">Veer Madan</h1>
+
+      <h3 class="gradient-text">
+        Building Systems & Creating Experiences
+      </h3>
+
+      <p>
+  I build tools, systems, and digital experiences that combine
+  technical depth with creative execution. My work spans web development,
+  system design, and content creation.
 </p>
+
+<p>
+  I enjoy understanding how things work beneath the surface — from debugging
+  complex systems and optimizing performance to designing clean and intuitive interfaces.
+</p>
+
+<p>
+  Beyond development, I create content, produce music, and explore new technologies,
+  constantly experimenting and pushing my skills further.
+</p>
+
+<p class="sub-note">
+  Focused on building meaningful systems and continuously evolving.
+</p>
+
+      <div class="about-actions">
+
+  <a href="assets/Veer-Madan-Resume.pdf" class="btn" download>
+    📄 Resume
+  </a>
+
+  <a href="#contact" class="btn secondary">
+    📩 Contact
+  </a>
+
+</div>
+
+    </div>
+
+  </div>
+
 </section>
 <!--my education-->
 <section class="section reveal">
@@ -124,6 +171,8 @@
 
 <!--AI USAGE-->
 <section class="section reveal">
+  <div class="ai-visual">AI</div>
+  <div class="code-visual">&lt;/&gt;</div>
   <h2>AI & Development Workflow</h2>
 
   <p>
@@ -151,7 +200,8 @@
   <div class="grid">
 
     <div class="card">
-      <h3>💻 Development</h3>
+       <div class="card-icon">💻</div>
+      <h3>Development</h3>
       <p>
         I build web applications, tools, and systems with a focus on performance,
         usability, and clean design. My work includes custom utilities,
@@ -160,7 +210,8 @@
     </div>
 
     <div class="card">
-      <h3>🎵 Music Production</h3>
+       <div class="card-icon">🎵</div>
+      <h3>Music Production</h3>
       <p>
         I create and produce music, exploring various genres and production techniques
         to craft unique soundscapes and compositions.
@@ -168,7 +219,9 @@
     </div>
 
     <div class="card">
-      <h3>🎬 Content & Streaming</h3>
+        <div class="card-icon">🎬</div>
+        <div class="card-icon">🎮</div>
+      <h3>Content & Streaming</h3>
       <p>
         I create gaming and tech content, focusing on storytelling,
         performance optimization, and behind-the-scenes insights.
@@ -176,6 +229,7 @@
     </div>
 
     <div class="card">
+        <div class="card-icon">🛠</div>
       <h3>🛠 Technical Systems</h3>
       <p>
         I work on troubleshooting, diagnostics, and system-level experimentation,
@@ -441,18 +495,35 @@ with different forms of digital creativity.
       </p>
     </div>
 
-    <!-- SPOTIFY CARD -->
-    <div class="music-card">
-      <iframe 
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/track/3VAzlIhm5CPWMozZrtRW1i?utm_source=generator"
-        width="100%" 
-        height="152"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-    </div>
+  <!-- ARTIST -->
+<div class="music-card">
+  <h3>My Music</h3>
+
+  <iframe 
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/artist/5JRt9Ex3doMS61P5m1iWnR"
+    width="100%" 
+    height="152"
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>
+
+<!-- TRACK -->
+<div class="music-card">
+  <h3>Latest Release: Tera Asar</h3>
+
+  <iframe 
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/3VAzlIhm5CPWMozZrtRW1i"
+    width="100%" 
+    height="152"
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>
 
     <!-- FL STUDIO INFO -->
     <div class="flstudio-info">

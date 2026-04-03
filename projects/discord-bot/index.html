@@ -12,6 +12,7 @@
 
 <div class="scroll-bar"></div>
 
+<link rel="icon" type="image/png" href="../../assets/favicon.png">
 <!-- NAVBAR (SAME AS MAIN) -->
 <nav class="navbar">
   <div class="nav-left">
@@ -19,10 +20,10 @@
   </div>
 
   <div class="nav-right">
-    <a href="../../index.html" class="nav-btn">Home</a>
-    <a href="../../assets/Veer-Madan-Resume.pdf" class="nav-btn" download>Resume</a>
-    <a href="https://github.com/VeerMadan" target="_blank" class="nav-btn">GitHub</a>
-    <a href="https://www.youtube.com/@VePlexity" target="_blank" class="nav-btn">YouTube</a>
+    <a href="https://www.linkedin.com/in/veer-madan/" target="_blank" class="nav-btn">🔗 LinkedIn</a>
+    <a href="../../assets/Veer-Madan-Resume.pdf" class="nav-btn" download>📄 Resume</a>
+    <a href="https://github.com/VeerMadan" target="_blank" class="nav-btn">💻 GitHub</a>
+    <a href="https://www.youtube.com/@VePlexity" target="_blank" class="nav-btn">▶️ YouTube</a>
 
     <label class="theme-switch">
       <input type="checkbox" id="themeToggle">
@@ -37,9 +38,11 @@
   <h1>VePlexity’s Discord Bot</h1>
 
   <p class="yt-desc">
-    A custom-built Discord bot designed for moderation, automation,
-    and real-time interaction within community servers.
-  </p>
+  VePlexity’s Discord Bot is a custom-built system designed to manage,
+  automate, and enhance server interactions in real-time.
+  Built from scratch using event-driven architecture, it handles moderation,
+  user interaction, and scalable command execution efficiently.
+</p>
 
   <section class="section reveal project-page">
   <h2>Highlights</h2>
@@ -75,26 +78,62 @@
   <div class="grid">
 
     <div class="card">
-      <h3>🛡 Moderation System</h3>
-      <p>Custom commands for managing users, maintaining rules, and server control.</p>
+      <div class="card-icon">🛡️</div>
+      <h3>Moderation System</h3>
+      <p>Advanced moderation system with customizable commands for user control and server management.</p>
+
     </div>
 
     <div class="card">
-      <h3>🎵 Music Playback (currently in development)</h3>
-      <p>Stream music directly in voice channels with seamless playback experience.</p>
+        <div class="card-icon">🎶</div>
+      <h3>Music Playback (currently in development)</h3>
+      <p>Music playback system (in development) designed for seamless streaming in voice channels.</p>
     </div>
 
     <div class="card">
-      <h3>⚙ Automation</h3>
-      <p>Automated responses and utilities for improved server efficiency.</p>
+      <div class="card-icon">🤖</div>
+      <h3>Automation</h3>
+      <p>Automation layer for handling repetitive tasks and improving server efficiency.</p>
     </div>
 
     <div class="card">
-      <h3>⚡ Real-Time Interaction</h3>
-      <p>Instant command execution and dynamic server responses.</p>
+      <div class="card-icon">⚡</div>
+      <h3>Real-Time Interaction</h3>
+      <p>Real-time interaction engine ensuring instant command execution and dynamic responses.</p>
     </div>
 
   </div>
+</section>
+
+<!--how it works-->
+<section class="section reveal project-page">
+  <h2>How It Works</h2>
+
+  <p>
+    The bot operates on an event-driven system using Discord’s gateway API.
+    It listens to real-time server events such as messages, joins, and commands,
+    and processes them through structured handlers.
+  </p>
+
+  <p>
+    Commands are modularized, allowing scalable expansion of features.
+    The system ensures low latency responses and efficient execution across
+    multiple server environments.
+  </p>
+</section>
+<!-- TECH ARCH -->
+<section class="section reveal project-page">
+  <h2>Technical Architecture</h2>
+
+  <p>
+    The bot is built using Node.js and Discord.js, leveraging asynchronous
+    event handling and modular command structures.
+  </p>
+
+  <p>
+    It uses an event-based system to process user inputs efficiently,
+    ensuring scalability and maintainability as new features are added.
+  </p>
 </section>
 
 <!-- TECH -->
@@ -105,6 +144,19 @@
     Node.js • Discord.js • JavaScript • API Integration • Event-driven systems
   </p>
 </section>
+<!-- CHALLENGES -->
+ <section class="section reveal project-page">
+  <h2>Challenges & Learnings</h2>
+
+  <ul class="highlights">
+    <li>Understanding real-time event handling and asynchronous programming</li>
+    <li>Designing scalable command systems</li>
+    <li>Managing performance and response time</li>
+    <li>Handling edge cases in user interaction and moderation logic</li>
+  </ul>
+</section>
+
+
 
 <!-- WHY I BUILT -->
 <section class="section reveal project-page">
@@ -121,15 +173,40 @@
   </p>
 </section>
 
+<!--future improvements-->
+<section class="section reveal project-page">
+  <h2>Future Improvements</h2>
+
+  <ul class="highlights">
+    <li>Complete music playback system with queue and controls</li>
+    <li>Database integration for persistent data</li>
+    <li>Advanced logging and analytics</li>
+    <li>Multi-server scalability improvements</li>
+  </ul>
+</section>
+
+
+<!--cta-->
+
+<section class="section reveal project-page">
+  <h2>Explore More</h2>
+
+  <p>
+    This project reflects my ability to build real-time systems and scalable
+    applications. I’m continuously improving it with new features and optimizations.
+  </p>
+
+
+
 <!-- BACK -->
-<section class="section project-page">
+<section class="section reveal project-page">
   <a href="../../index.html" class="nav-btn">← Back to Portfolio</a>
 </section>
 
 <div class="cursor-glow"></div>
 <div class="theme-transition"></div>
+<script src="/script.js"></script>
 
-<script src="../../script.js"></script>
 
 <footer class="footer">
   <p>© 2026 Veer Madan • Built from scratch</p>
