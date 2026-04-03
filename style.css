@@ -222,26 +222,7 @@ nav a:hover {
   filter: blur(0);
 }
 
-.cursor-glow {
-  position: fixed;
-  width: 180px;
-  height: 180px;
 
-  background: radial-gradient(
-    circle,
-    rgba(124,58,237,0.08),
-    transparent 70%
-  );
-
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-
-  filter: blur(40px);
-  opacity: 0.6;
-
-  transition: opacity 0.3s ease;
-}
 body:not(:hover) .cursor-glow {
   opacity: 0.2;
 }
