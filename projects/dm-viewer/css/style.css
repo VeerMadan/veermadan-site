@@ -662,15 +662,22 @@ img.emoji {
 .welcome-box {
   background: #181818;
   color: #eee;
-  padding: 40px 50px;
-  border-radius: 16px;
-  max-width: 600px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
-  animation: popIn 1s ease-out;
-}
 
+  padding: 30px 35px;   /* smaller */
+  border-radius: 16px;
+
+  max-width: 520px;     /* limit width */
+  width: 90%;
+
+  text-align: center;
+
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
+
+  animation: popIn 0.8s ease-out;
+
+  max-height: 85vh;     /* prevent overflow */
+  overflow-y: auto;     /* scroll if needed */
+}
 .welcome-title {
   font-size: 2.5em;
   background: linear-gradient(90deg, #ff6ec4, #7873f5, #48c6ef);
@@ -740,8 +747,8 @@ img.emoji {
   }
 }
 .welcome-logo {
-  width: 500px; /* Reduce this value */
+  width: 160px; /* Reduce this value */
   height: auto;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
   display: block;
 }

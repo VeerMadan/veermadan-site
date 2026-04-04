@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,21 +10,60 @@
 <body>
 
   <!-- 🌟 Welcome Screen -->
- <div id="welcomeScreen" class="welcome-screen">
+<!-- 🌟 Welcome Screen -->
+<div id="welcomeScreen" class="welcome-screen">
   <div class="welcome-box">
+
     <img src="assets/VP-logo.png" alt="Logo" class="welcome-logo" />
+
     <h1 class="welcome-title">VePlexity’s Insta DM Viewer</h1>
     <p class="welcome-tagline">Built for memories. Designed for clarity.</p>
+
+    <div class="welcome-info">
+      <p><strong>📌 What is this?</strong><br>
+      A private, offline tool to view and explore your Instagram DMs with advanced features like search, highlights, and stats.</p>
+
+      <hr>
+
+      <p><strong>⚡ How to use:</strong></p>
+      <ol>
+        <li>Download your Instagram data (messages)</li>
+        <li>Locate <code>messages_1.json</code></li>
+        <li>Upload it inside this tool</li>
+      </ol>
+
+      <hr>
+
+      <p><strong>📥 How to download Instagram messages:</strong><br>
+      Instagram → Settings → Accounts Center → Your Info → Download Your Info → Request JSON</p>
+
+      <hr>
+
+      <p><strong>🔒 Privacy:</strong><br>
+      ✔ Runs locally in your browser<br>
+      ✔ No data uploaded<br>
+      ✔ No storage / no tracking</p>
+
+      <hr>
+
+      <p><strong>💻 Offline Use:</strong><br>
+      Download from GitHub and run without internet.</p>
+
+      <a href="https://github.com/VePlexity/VePlexity-s-Instagram-DM-Viewer" target="_blank">
+        🔗 View Source on GitHub
+      </a>
+    </div>
+
     <button id="startToolBtn" class="start-btn">🚀 Start Tool</button>
+
   </div>
 </div>
 
 
-
   <!-- 🎬 Splash Screen -->
-  <div id="splash" class="splash-screen hidden">
+  <div id="splash" class="splash-screen" style="display: none;">
     <h1 class="splash-title">VePlexity’s Insta DM Viewer</h1>
-    <p class="splash-subtitle">Loading developer build... 🛠️</p>
+    <p class="splash-subtitle">Loading release build... 🛠️</p>
   </div>
 
   <!-- 🔄 Loader -->
@@ -68,6 +108,291 @@
 
     <main>
       <header>
+        <h1 class="fancy-title">VePlexity’s Insta DM Viewer <span class="dev-tag">release</span></h1>
+        <div class="controls">
+          <label class="file-label">
+            📂 Choose JSON
+            <input type="file" id="fileInput" accept=".json" />
+          </label>
+          <span id="fileNameDisplay">No file chosen</span>
+          <select id="identitySelector" class="hidden"></select>
+          <input type="text" id="search" placeholder="Search messages..." />
+        </div>
+      </header>
+
+      <section id="chatContainer" class="chat-container-wrapper">
+        <div id="chatInner" class="chat-inner"></div>
+      </section>
+
+      <footer class="footer">
+        Made with ❤️ by <strong>Veer Madan</strong> (with help from ChatGPT 🤖)
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <audio id="introAudio" src="assets/gta_intro.mp3" preload="auto"></audio>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+OLD DEAD CODE
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VePlexity’s Insta DM Viewer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+ <!-- 🔥 MODERN FULLSCREEN WELCOME 
+<div id="welcomeScreen" class="welcome-screen">
+
+  <div class="welcome-content">
+
+  <h1 class="welcome-title">VePlexity’s Insta DM Viewer</h1>
+  <p class="welcome-tagline">Built for memories. Designed for clarity.</p>
+
+  <div class="welcome-section">
+    <h3>📌 What is this?</h3>
+    <p>
+      This tool lets you view your Instagram messages in a clean, scrollable interface.
+      Load your exported <strong>messages_1.json</strong> file and explore your chats offline.
+    </p>
+  </div>
+
+  <div class="welcome-section">
+    <h3 class="collapsible-header">⚙️ How to use <span>▼</span></h3>
+<div class="collapsible-content open">
+    <ol>
+      <li>Download your Instagram data (JSON format)</li>
+      <li>Locate the <code>messages_1.json</code> file</li>
+      <li>Upload it using the "Choose JSON" button</li>
+      <li>Select your name and view chats instantly</li>
+    </ol>
+  </div>
+
+  <div class="welcome-section">
+    <h3>📥 How to download Instagram chats</h3>
+    <ol>
+      <li>Go to Instagram → Settings → Accounts Center</li>
+      <li>Click <strong>Your Information</strong></li>
+      <li>Select <strong>Download your information</strong></li>
+      <li>Choose <strong>JSON format</strong></li>
+      <li>After download, extract files</li>
+      <li>Navigate to:<br>
+        <code>your_instagram_activity/messages/inbox/</code>
+      </li>
+      <li>Open any chat folder → use <code>messages_1.json</code></li>
+    </ol>
+  </div>
+
+  <div class="welcome-section">
+    <h3>🔒 Privacy</h3>
+    <p>
+      Your data never leaves your device. Everything runs locally in your browser.
+      No uploads. No servers. 100% offline.
+    </p>
+  </div>
+
+  <div class="welcome-actions">
+    <a href="#" class="sample-btn">📄 Sample JSON</a>
+    <button id="startToolBtn" class="start-btn">🚀 Start Tool</button>
+    <a href="https://github.com/VePlexity/VePlexity-s-Instagram-DM-Viewer" target="_blank" class="github-btn">
+      🌐 View on GitHub
+    </a>
+  </div>
+
+</div>
+
+</div>
+
+
+
+  <!-- 🎬 Splash Screen 
+  <div id="splash" class="splash-screen hidden-init">
+    <h1 class="splash-title">VePlexity’s Insta DM Viewer</h1>
+    <p class="splash-subtitle" id="splashTyping"></p>
+  </div>
+
+  <!-- 🔄 Loader 
+  <div id="loader" class="loader-overlay hidden">
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading messages...</p>
+  </div>
+
+  <!-- 🧩 Main App 
+  <div class="app hidden show">
+    <aside id="highlightSidebar">
+      <h2 id="highlights-title">⭐ Chat Highlights</h2>
+      <ul id="highlightList"></ul>
+
+      <h2 id="stats-title" class="toggle-header" onclick="togglePanel('statsContent', this)">
+        <span>📊 Chat Stats</span> <span class="arrow">▼</span>
+      </h2>
+      <div id="statsContent" class="collapsible open">
+        <div id="chatStats" class="chat-stats"></div>
+      </div>
+
+      <h2 id="cloud-title" class="toggle-header" onclick="togglePanel('cloudContent', this)">
+        <span>☁️ Word Cloud</span> <span class="arrow">▼</span>
+      </h2>
+      <div id="cloudContent" class="collapsible open">
+        <canvas id="wordCloudCanvas" width="240" height="200"></canvas>
+      </div>
+
+      <h2 class="toggle-header" onclick="togglePanel('aboutMeContent', this)">
+        <span>🧠 About the Creator</span> <span class="arrow">▼</span>
+      </h2>
+      <div id="aboutMeContent" class="collapsible open">
+        <div class="about-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="Dev Avatar" class="dev-avatar">
+          <p><strong>👨‍💻 Veer Madan</strong> (aka VePlexity)</p>
+          <p>🛠 Creator & Developer of this tool</p>
+          <p>📌 Built for personal use, memory, and clarity</p>
+          <p>💬 “Every chat tells a story. I just wanted to read it better.”</p>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <button id="menuToggle" class="menu-btn">☰</button>
         <h1 class="fancy-title">VePlexity’s Insta DM Viewer <span class="dev-tag">[dev]</span></h1>
         <div class="controls">
           <label class="file-label">
@@ -93,3 +418,4 @@
   <script src="js/app.js"></script>
 </body>
 </html>
+-->
